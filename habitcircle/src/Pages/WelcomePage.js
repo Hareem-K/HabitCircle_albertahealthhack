@@ -1,5 +1,6 @@
 //welcome page
 import React from 'react';
+import './Styling/WelcomePage.css';
 
 function WelcomePage() {
 
