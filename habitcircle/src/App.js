@@ -4,7 +4,7 @@ import WelcomePage from './Pages/WelcomePage';
 import UserSelect from './Pages/UserSelect';
 import AdminSignUp from './Pages/AdminSignUp';
 import MainDashboard from './Pages/MainDashboard';
-import ChildDashboard from './Pages/ChildDashboard';
+import PatientDashboard from './Pages/PatientDashboard';
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
         <Route path="/" element={<WelcomePage />} />
         <Route path="/userselect" element={<UserSelect />} />
         <Route path="/Admin" element={<AdminSignUp />} />
+        <Route path="/patientDashboard" element={<PatientDashboard />} />
         <Route path="/mainDashboard" element={<MainDashboard />} />
       </Routes>
     </Router>
