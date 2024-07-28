@@ -20,6 +20,9 @@ function PatientDashboard() {
 
     return (
         <div className="patient-dashboard">
+            <div className="navbar">
+                <a href="/">Logout</a>
+            </div>
             <div className="header">
                 <div className="achievements">
                     <button>Achievements</button>
