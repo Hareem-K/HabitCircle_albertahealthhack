@@ -1,0 +1,33 @@
+.admin-signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Default background color */
+}
+
+.admin-signup-container.bg-special {
+    background-color: var(--MainTurqoise); /* Light blue background color */
+}
+
+.admin-signup-container h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.admin-signup-container button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.admin-signup-container p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.AdminTitle {
+    color: #2A8EA4;
+}

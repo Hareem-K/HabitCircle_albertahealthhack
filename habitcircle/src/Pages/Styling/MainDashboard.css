@@ -1,0 +1,55 @@
+/* Styling/MainDashboard.css */
+.main-dashboard {
+    background-color: #73CADD;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #333333; /* Darker color for better contrast */
+    font-family: Arial, sans-serif;
+}
+
+.welcome-message {
+    margin-bottom: 50px;
+    font-size: 24px;
+}
+
+.daily-streak {
+    background-color: white;
+    color: #333333;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.daily-streak p {
+    margin: 10px 0;
+}
+
+.navbar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.navbar a {
+    color: #333333;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.habits-bar {
+    background-color: white;
+    color: #333333;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top:50px;
+}
