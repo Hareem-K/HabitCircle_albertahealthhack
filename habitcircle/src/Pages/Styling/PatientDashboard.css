@@ -1,0 +1,68 @@
+/* PatientDashboard.css */
+.patient-dashboard {
+    text-align: center;
+    background-color: #e0f7fa;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #00838f;
+    margin-bottom: 20px;
+}
+
+.todo-list {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.task:last-child {
+    border-bottom: none;
+}
+
+.task-info {
+    text-align: left;
+}
+
+.edit-button {
+    background-color: #81d4fa;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.task-points {
+    display: flex;
+    align-items: center;
+}
+
+.task-points span:first-child {
+    margin-right: 5px;
+}
+
+.message {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    color: #00838f;
+    font-size: 16px;
+    margin-top: 20px;
+}
