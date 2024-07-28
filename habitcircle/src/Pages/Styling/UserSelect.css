@@ -1,0 +1,121 @@
+.user-select-background {
+    position: relative;
+    height: 100vh;
+    background-color: #70A0AF;
+    overflow: hidden; /* no scrollbars for bubbles */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bubble {
+    position: absolute;
+    background-color: #ADD8E6;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: float 10s infinite;
+}
+
+.bubble:nth-child(1) {
+    width: 50px;
+    height: 50px;
+    left: 10%;
+    bottom: 50%;
+    animation-duration: 12s;
+    animation-delay: 2s;
+}
+
+.bubble:nth-child(2) {
+    width: 40px;
+    height: 40px;
+    left: 50%;
+    bottom: 65%;
+    animation-duration: 8s;
+    animation-delay: 4s;
+}
+
+.bubble:nth-child(3) {
+    width: 40px;
+    height: 40px;
+    left: 80%;
+    bottom: 40%;
+    animation-duration: 10s;
+    animation-delay: 6s;
+}
+
+.bubble:nth-child(4) {
+    width: 30px;
+    height: 30px;
+    left: 30%;
+    bottom: 25%;
+    animation-duration: 14s;
+    animation-delay: 1s;
+}
+
+.bubble:nth-child(5) {
+    width: 70px;
+    height: 70px;
+    left: 70%;
+    bottom: 5%;
+    animation-duration: 16s;
+    animation-delay: 3s;
+}
+
+@keyframes float {
+    0% {
+        bottom: -10%;
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        bottom: 110%;
+        transform: translateX(0);
+    }
+}
+
+.user-select-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+.user-select-content h1 {
+    color: white;
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.user-select-content p {    
+    color: white;
+    font-size: 20px;
+}
+
+.user-select-content button {
+    font-size: 22px;
+    margin: 20px;
+    padding: 15px 35px;
+    background-color: #F5F5F5;
+    color: #405580;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.user-select-content button:hover {
+    background-color: #ffffff;
+    color: #334871;
+    transform: scale(1.05); 
+}
+
+.user-select-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
