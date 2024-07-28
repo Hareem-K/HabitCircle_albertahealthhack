@@ -1,3 +1,12 @@
+:root {
+    --MainTurqoise: #73CADD;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+}
+
 .admin-signup-container {
     display: flex;
     flex-direction: column;
@@ -5,6 +14,7 @@
     justify-content: center;
     height: 100vh;
     background-color: #f0f0f0; /* Default background color */
+    position: relative; /* Ensure the container is positioned relatively */
 }
 
 .admin-signup-container.bg-special {
@@ -30,4 +40,119 @@
 
 .AdminTitle {
     color: #2A8EA4;
+}
+
+.GeneratedKey {
+    color: #2A8EA4;
+    text-align: center; /* Horizontally center the text */
+    width: 100%; /* Ensure the element takes up full width */
+}
+
+.copy-code-button {
+    display: flex;
+    align-items: center;
+    justify-content: center !important; /* Horizontally center the button */
+    margin: auto !important; /* Center the button horizontally */
+    text-align: center; /* Horizontally center the text */
+}
+
+.copy-code-button i {
+    margin-left: 8px; /* Space between text and icon */
+}
+
+.go-to-dashboard {
+    position: absolute; /* Position the button absolutely */
+    bottom: 20px; /* Adjust the distance from the bottom */
+    right: 20px; /* Adjust the distance from the right */
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #405580;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.go-to-dashboard:hover {
+    background-color: #2f436b;
+    transform: scale(1.05); 
+}
+
+.go-to-dashboard::after {
+    content: '→'; /* Add an arrow after the text */
+    margin-left: 8px; /* Space between text and arrow */
+    font-size: 1.2em;
+}
+
+/* Circle clusters */
+.circle-cluster {
+    position: absolute;
+}
+
+.circle {
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+}
+
+/* Top right cluster */
+.top-right-cluster {
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+}
+
+.top-right-cluster .circle:nth-child(1) {
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 25px;
+}
+
+.top-right-cluster .circle:nth-child(2) {
+    width: 30px;
+    height: 30px;
+    top: 35px;
+    left: 0;
+}
+
+.top-right-cluster .circle:nth-child(3) {
+    width: 40px;
+    height: 40px;
+    top: 35px;
+    left: 65px;
+}
+
+/* Bottom left cluster */
+.bottom-left-cluster {
+    bottom: 20px;
+    left: 20px;
+    width: 120px;
+    height: 120px;
+}
+
+.bottom-left-cluster .circle:nth-child(1) {
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 30px;
+}
+
+.bottom-left-cluster .circle:nth-child(2) {
+    width: 30px;
+    height: 30px;
+    top: 50px;
+    left: 0;
+}
+
+.bottom-left-cluster .circle:nth-child(3) {
+    width: 50px;
+    height: 50px;
+    top: 50px;
+    left: 45px;
 }

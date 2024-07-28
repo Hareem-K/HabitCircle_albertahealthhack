@@ -31,20 +31,35 @@ function AdminSignUp() {
 
     return (
         <div className="admin-signup-container bg-special">
-            <h1 className='AdminTitle'>Admin Sign Up</h1>
+            <h1 className="AdminTitle">Admin Sign Up</h1>
             <button onClick={generateKey}>Generate Code</button>
             {generatedKey && (
                 <div>
-                    <p>Generated Key: {generatedKey}</p>
-                    <button onClick={handleShareCode}>Share Code</button>
-                    {showDashboardButton && (
-                        <button onClick={goToDashboard}>Go to Family Dashboard</button>
-                    )}
+                    <p className="GeneratedKey">Generated Key: {generatedKey}</p>
+                    <button className="copy-code-button" onClick={handleShareCode}>
+                        Copy Code <i className="fa fa-copy"></i>
+                    </button>
                 </div>
             )}
+            {showDashboardButton && (
+                <button className="go-to-dashboard" onClick={goToDashboard}>
+                    Go to Family Dashboard
+                </button>
+            )}
+            <div className="circle-cluster top-right-cluster">
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+            </div>
+            <div className="circle-cluster bottom-left-cluster">
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+            </div>
         </div>
     );
 }
 
 export default AdminSignUp;
-
