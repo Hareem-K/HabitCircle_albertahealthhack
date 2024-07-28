@@ -1,5 +1,5 @@
 //Enter Family Code
-//Go to Main Dashboard
+//Go to Patient Dashboard
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Styling/FamilySignUp.css';
@@ -9,11 +9,10 @@ function FamilySignUp() {
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
     const [familyCode, setFamilyCode] = useState('');
-    const [isPatient, setIsPatient] = useState(false); // New state for toggle
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        navigate('/mainDashboard');
+        navigate('/patientDashboard');
     };
 
     return (
@@ -22,7 +21,7 @@ function FamilySignUp() {
                 <a href="/userselect">Back</a>
             </div>
             <div className="family-signup-content">
-                <h2>Family Member Sign Up</h2>
+                <h2>Patient Sign Up</h2>
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor="email">Enter Email</label>

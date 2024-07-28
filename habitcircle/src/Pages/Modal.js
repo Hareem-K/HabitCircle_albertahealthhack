@@ -1,4 +1,4 @@
-// Modal.js
+// Modal.js: to decipher if the user is an admin, family member, or patient
 import React from 'react';
 import './Styling/Modal.css';
 

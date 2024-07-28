@@ -7,6 +7,7 @@ import Modal from './Modal';
 function UserSelect() {
     const navigate = useNavigate();
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isPatient, setIsPatient] = useState(false);
 
     const handleReturningUserClick = () => {
         navigate('/returning-user');
@@ -31,8 +32,10 @@ function UserSelect() {
     };
 
     const handlePatientClick = () => {
-        navigate('/family-signup');
+        navigate('/patient-signup');
         setIsModalOpen(false);
+        setIsPatient(true);
+        console.log("User is a patient");
     };
 
     return (
