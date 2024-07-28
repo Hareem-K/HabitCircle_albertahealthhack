@@ -6,10 +6,16 @@ import React, { useState } from 'react';
 import './Styling/AdminSignUp.css';
 
 function AdminSignUp() {
+    const [adminName, setAdminName] = useState('');
+    const [adminEmail, setAdminEmail] = useState('');
     const [generatedKey, setGeneratedKey] = useState('');
     const [showDashboardButton, setShowDashboardButton] = useState(false);
 
     const generateKey = () => {
+        if (adminName === '' || adminEmail === '') {
+            alert('Please enter both name and email.');
+            return;
+        }
         // Simple key generation logic (for demonstration purposes)
         const key = Math.random().toString(36).substring(2, 15);
         setGeneratedKey(key);
@@ -32,6 +38,20 @@ function AdminSignUp() {
     return (
         <div className="admin-signup-container bg-special">
             <h1 className="AdminTitle">Admin Sign Up</h1>
+            <input
+                type="text"
+                placeholder="Admin Name"
+                value={adminName}
+                onChange={(e) => setAdminName(e.target.value)}
+                className="admin-input"
+            />
+            <input
+                type="email"
+                placeholder="Admin Email"
+                value={adminEmail}
+                onChange={(e) => setAdminEmail(e.target.value)}
+                className="admin-input"
+            />
             <button onClick={generateKey}>Generate Code</button>
             {generatedKey && (
                 <div>
