@@ -64,7 +64,7 @@ function MainDashboard() {
     return (
         <div className="main-dashboard">
             <div className="navbar">
-                <a href="/">Home</a>
+                <a href="/">Logout</a>
             </div>
             <p className="welcome-message">Welcome FamilyMemberOne!</p>
             <div className="daily-streak">

@@ -50,7 +50,7 @@
     background-color: #405580;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -58,6 +58,12 @@
 .welcome-content button:hover {
     background-color: #2f436b;
     transform: scale(1.05); 
+}
+
+.welcome-content button::after {
+    content: '→'; 
+    margin-left: 8px; 
+    font-size: 1.2em;
 }
 
 /* Made the margins a bit better */

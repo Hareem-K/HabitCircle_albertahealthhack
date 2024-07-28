@@ -38,6 +38,9 @@ function AdminSignUp() {
 
     return (
         <div className="admin-signup-container bg-special">
+            <div className="navbar">
+                <a href="/userselect">Back</a>
+            </div>
             <h1 className="AdminTitle">Admin Sign Up</h1>
             <input
                 type="text"

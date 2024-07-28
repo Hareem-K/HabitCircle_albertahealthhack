@@ -1,5 +1,5 @@
 :root {
-    --MainTurqoise: #73CADD;
+    --BlueBass: #70A0AF;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -18,7 +18,7 @@ body {
 }
 
 .admin-signup-container.bg-special {
-    background-color: var(--MainTurqoise); /* Light blue background color */
+    background-color: var(--BlueBass); /* Light blue background color */
 }
 
 .admin-signup-container h1 {
@@ -32,7 +32,7 @@ body {
     font-size: 1em;
     width: 200px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 30px;
 }
 
 .admin-signup-container button {
@@ -40,6 +40,8 @@ body {
     padding: 10px 20px;
     font-size: 1em;
     cursor: pointer;
+    border: none;
+    border-radius: 10px;
 }
 
 .admin-signup-container p {
@@ -48,11 +50,12 @@ body {
 }
 
 .AdminTitle {
-    color: #2A8EA4;
+    color: #405580;
 }
 
 .GeneratedKey {
-    color: #2A8EA4;
+    padding: 10px 0;
+    color: #405580;
     text-align: center; /* Horizontally center the text */
     width: 100%; /* Ensure the element takes up full width */
 }
@@ -104,7 +107,7 @@ body {
 
 .circle {
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #ADD8E6;
     position: absolute;
 }
 
@@ -126,14 +129,14 @@ body {
 .top-right-cluster .circle:nth-child(2) {
     width: 30px;
     height: 30px;
-    top: 35px;
+    top: 40px;
     left: 0;
 }
 
 .top-right-cluster .circle:nth-child(3) {
     width: 40px;
     height: 40px;
-    top: 35px;
+    top: 45px;
     left: 65px;
 }
 

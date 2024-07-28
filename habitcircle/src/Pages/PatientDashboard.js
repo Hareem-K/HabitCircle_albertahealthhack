@@ -13,6 +13,9 @@ function PatientDashboard() {
 
     return (
         <div className="patient-dashboard">
+            <div className="navbar">
+                <a href="/">Logout</a>
+            </div>
             <h1>Welcome Child!</h1>
             <div className="todo-list">
                 <h2>To-Do List</h2>

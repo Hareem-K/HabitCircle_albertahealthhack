@@ -30,8 +30,16 @@ function UserSelect() {
         setIsModalOpen(false);
     };
 
+    const handlePatientClick = () => {
+        navigate('/family-signup');
+        setIsModalOpen(false);
+    };
+
     return (
         <div className='user-select-background'>
+            <div className="navbar">
+                <a href="/">Back</a>
+            </div>
             <div className="bubble"></div>
             <div className="bubble"></div>
             <div className="bubble"></div>
@@ -48,10 +56,10 @@ function UserSelect() {
                 onClose={closeModal}
                 onParentClick={handleParentClick}
                 onFamilyClick={handleFamilyClick}
+                onPatientClick={handlePatientClick}
             />
         </div>
     );
 }
 
 export default UserSelect;
-
