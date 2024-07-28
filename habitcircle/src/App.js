@@ -6,6 +6,7 @@ import FamilySignUp from './Pages/FamilySignUp';
 import AdminSignUp from './Pages/AdminSignUp';
 import MainDashboard from './Pages/MainDashboard';
 import PatientDashboard from './Pages/PatientDashboard';
+//import Wordle from './Pages/UnlockedGame';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/family-signup" element={<FamilySignUp />} />
         <Route path="/patientDashboard" element={<PatientDashboard />} />
         <Route path="/mainDashboard" element={<MainDashboard />} />
+        {/* <Route path="/unLock" element={<UnlockedGame />} /> */}
       </Routes>
     </Router>
   );

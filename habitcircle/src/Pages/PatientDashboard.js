@@ -1,8 +1,11 @@
 // PatientDashboard.js
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Styling/PatientDashboard.css';
 
 function PatientDashboard() {
+    const navigate = useNavigate();
+
     // Example data, replace with your actual data or fetch from API
     const [tasks, setTasks] = useState([
         { name: 'Walking', completed: 0.5, total: 1, points: 30, editable: true },
@@ -11,24 +14,37 @@ function PatientDashboard() {
         { name: 'TV Time', completed: 0.5, total: 0.5, points: 7, editable: true },
     ]);
 
+    const handleUnlockClick = () => {
+        window.location.href = 'http://localhost:3000/unLockedGame';
+    };
+
     return (
         <div className="patient-dashboard">
-            <div className="navbar">
-                <a href="/">Logout</a>
+            <div className="header">
+                <div className="achievements">
+                    <button>Achievements</button>
+                </div>
+                <h1>Welcome Patient!</h1>
+                <div className="unlocked-games">
+                    <span className="coin-icon">🪙</span>
+                    <span>50</span>
+                    <button onClick={handleUnlockClick}>Unlocked Games</button>
+                </div>
             </div>
-            <h1>Welcome Child!</h1>
             <div className="todo-list">
                 <h2>To-Do List</h2>
+                <button className="edit-todo">Edit To-Do List</button>
                 {tasks.map((task, index) => (
                     <div key={index} className="task">
                         <div className="task-info">
-                            <span>{task.name}</span>
-                            <span>{task.completed} / {task.total} hours complete</span>
+                            <span className="task-name">{task.name}</span>
+                            <div className="task-details">
+                                <span className="task-points">🔥 {task.points}</span>
+                                <span className="task-completion">⏰ {task.completed} / {task.total} hours complete</span>
+                            </div>
                         </div>
-                        {task.editable && <button className="edit-button">Edit</button>}
-                        <div className="task-points">
-                            <span>{task.points}</span>
-                            <span role="img" aria-label="fire">🔥</span>
+                        <div className="lock-icon" onClick={handleUnlockClick}>
+                            🔒
                         </div>
                     </div>
                 ))}
