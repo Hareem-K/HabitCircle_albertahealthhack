@@ -3,6 +3,7 @@
 //Share code
 //Go to Family Dashboard
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Styling/AdminSignUp.css';
 
 function AdminSignUp() {
@@ -10,6 +11,7 @@ function AdminSignUp() {
     const [adminEmail, setAdminEmail] = useState('');
     const [generatedKey, setGeneratedKey] = useState('');
     const [showDashboardButton, setShowDashboardButton] = useState(false);
+    const navigate = useNavigate();
 
     const generateKey = () => {
         if (adminName === '' || adminEmail === '') {
@@ -31,8 +33,7 @@ function AdminSignUp() {
 
     const goToDashboard = () => {
         // Logic to navigate to the Family Dashboard
-        alert('Navigating to Family Dashboard');
-        // Implement actual navigation logic here
+        navigate('/mainDashboard');
     };
 
     return (
