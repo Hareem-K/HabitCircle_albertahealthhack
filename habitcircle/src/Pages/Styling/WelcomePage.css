@@ -1,0 +1,66 @@
+.sunrise-background {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(to bottom, #CCF6FF 50%, #70A0AF 50%);
+    display: flex;
+    flex-direction: column;
+}
+.sun {
+    width: 300px;
+    height: 150px;
+    background: #73CADD;
+    border-radius: 150px 150px 0 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-100%);
+    align-self: center;
+    z-index: 1;
+}
+
+.welcome-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome-content p, .welcome-content h1 {
+    margin: 0;
+    text-align: center;
+}
+.welcome-content p {
+    color: #52B2C8;
+    font-size: 28px;
+    font-weight: 450;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.welcome-content h1 {
+    color: #4C8192;
+    font-size: 68px;
+    font-weight: 800;
+}
+
+.welcome-content button {
+    font-size: 18px;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #405580;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.welcome-content button:hover {
+    background-color: #2f436b;
+    transform: scale(1.05); 
+}
+
+/* These margins are sort of bad?? Idk but responsive kinda bad... */
+.top-welcome {
+    margin-top: 35px;
+}
+.bottom-welcome {
+    margin-top: 315px;
+}
