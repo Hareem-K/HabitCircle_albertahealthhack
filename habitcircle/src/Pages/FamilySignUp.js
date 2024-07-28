@@ -1,4 +1,3 @@
-//Family Member enters family code and goes to family dashboard
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Styling/FamilySignUp.css';
@@ -8,11 +7,16 @@ function FamilySignUp() {
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
     const [familyCode, setFamilyCode] = useState('');
+    const [isPatient, setIsPatient] = useState(false); // New state for toggle
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission and validation if needed
-        navigate('/mainDashboard');
+        // Redirect based on the value of isPatient
+        if (isPatient) {
+            navigate('/patientDashboard');
+        } else {
+            navigate('/mainDashboard');
+        }
     };
 
     return (
@@ -51,6 +55,15 @@ function FamilySignUp() {
                             value={familyCode}
                             onChange={(e) => setFamilyCode(e.target.value)}
                             required
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="isPatient">I am the patient&nbsp;&nbsp;</label>
+                        <input
+                            type="checkbox"
+                            id="isPatient"
+                            checked={isPatient}
+                            onChange={(e) => setIsPatient(e.target.checked)}
                         />
                     </div>
                     <button type="submit">→</button>
