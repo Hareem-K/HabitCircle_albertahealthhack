@@ -1,16 +1,33 @@
-import React from 'react';
+// UserSelect.js
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Styling/UserSelect.css';
+import Modal from './Modal';
 
 function UserSelect() {
     const navigate = useNavigate();
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleReturningUserClick = () => {
         navigate('/returning-user');
     };
 
     const handleNewUserClick = () => {
-        navigate('/new-user');
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
+
+    const handleParentClick = () => {
+        navigate('/admin');
+        setIsModalOpen(false);
+    };
+
+    const handleFamilyClick = () => {
+        navigate('/family-signup');
+        setIsModalOpen(false);
     };
 
     return (
@@ -26,8 +43,15 @@ function UserSelect() {
                     <button onClick={handleNewUserClick}>New User</button>
                 </div>
             </div>
+            <Modal
+                isOpen={isModalOpen}
+                onClose={closeModal}
+                onParentClick={handleParentClick}
+                onFamilyClick={handleFamilyClick}
+            />
         </div>
     );
 }
 
 export default UserSelect;
+

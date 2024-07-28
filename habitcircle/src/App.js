@@ -4,6 +4,7 @@ import WelcomePage from './Pages/WelcomePage';
 import UserSelect from './Pages/UserSelect';
 import AdminSignUp from './Pages/AdminSignUp';
 import MainDashboard from './Pages/MainDashboard';
+import ChildDashboard from './Pages/ChildDashboard';
 
 function App() {
   return (
