@@ -15,7 +15,7 @@ function PatientDashboard() {
     ]);
 
     const handleUnlockClick = () => {
-        window.location.href = 'http://localhost:3000/unLockedGame';
+        window.location.href = 'https://tlavo.github.io/Wordle/';
     };
 
     return (
