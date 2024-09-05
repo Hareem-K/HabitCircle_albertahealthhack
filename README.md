@@ -46,6 +46,7 @@ Access a curated collection of articles, guides, and tools related to rehabilita
 - **React**: For building the user interface.
 - **Firebase**: For backend services, including database management and user authentication.
 
+Check out the project [Here]([https://www.codecademy.com/pages/contribute-docs](https://devpost.com/software/habitcycle))!
 ## Group Members
 
 - Batool Hussaini
